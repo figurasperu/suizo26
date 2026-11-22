@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Álbum Mundial 2026 Panini — Lista Rápida de Figuritas</title>
+  <!-- Fuente Inter para máxima legibilidad en tablas y celulares -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS desde CDN (100% listo para GitHub Pages) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#071120',
+              900: '#0B192C',
+              800: '#132743',
+              700: '#1D3B63',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* Ocultar barra de scroll en la barra de accesos rápidos */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Desplazamiento suave global para saltos de grupo */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans antialiased selection:bg-lime-300 selection:text-navy-950 pb-40">
+
+  <!-- ==================== 1. BANNER SUPERIOR DE OFERTA CON CONTADOR EN VIVO ==================== -->
+  <div id="offer-banner" class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-800 border-b border-lime-400/30 text-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2.5 flex flex-col md:flex-row md:items-center md:justify-between gap-2 sm:gap-4">
+      <!-- Bloque izquierdo: Oferta y fecha límite -->
+      <div class="flex items-start sm:items-center gap-2.5 min-w-0">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-lime-400 text-navy-950 shrink-0 shadow-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+          </svg>
+        </span>
+        <div class="min-w-0">
+          <p id="offer-title" class="text-sm sm:text-base font-black tracking-tight text-lime-300 leading-snug">
+            OFERTA "DESCUENTO 20%"
+          </p>
+          <p id="offer-end-date" class="text-xs text-slate-200 font-medium">
+            Termina el 30 de noviembre de 2026 a las 23:59
+          </p>
+        </div>
+      </div>
+
+      <!-- Bloque derecho: Contador regresivo en vivo -->
+      <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 shrink-0">
+        <span id="offer-countdown-label" class="text-[11px] sm:text-xs font-semibold text-amber-300 leading-tight">
+          Falta este tiempo para caducar la oferta:
+        </span>
+
+        <div id="offer-countdown-wrap" class="flex items-center gap-1.5" aria-live="polite">
+          <div class="min-w-[44px] px-2 py-1 rounded-xl bg-white/10 border border-white/15 text-center">
+            <span id="cd-days" class="block text-sm sm:text-base font-extrabold leading-none tabular-nums text-white">00</span>
+            <span class="block text-[9px] uppercase tracking-wider text-lime-300 mt-0.5 font-bold">Días</span>
+          </div>
+          <span class="text-lime-400/70 font-bold text-xs">:</span>
+          <div class="min-w-[44px] px-2 py-1 rounded-xl bg-white/10 border border-white/15 text-center">
+            <span id="cd-hours" class="block text-sm sm:text-base font-extrabold leading-none tabular-nums text-white">00</span>
+            <span class="block text-[9px] uppercase tracking-wider text-lime-300 mt-0.5 font-bold">Horas</span>
+          </div>
+          <span class="text-lime-400/70 font-bold text-xs">:</span>
+          <div class="min-w-[44px] px-2 py-1 rounded-xl bg-white/10 border border-white/15 text-center">
+            <span id="cd-minutes" class="block text-sm sm:text-base font-extrabold leading-none tabular-nums text-white">00</span>
+            <span class="block text-[9px] uppercase tracking-wider text-lime-300 mt-0.5 font-bold">Min</span>
+          </div>
+          <span class="text-lime-400/70 font-bold text-xs">:</span>
+          <div class="min-w-[44px] px-2 py-1 rounded-xl bg-white/10 border border-white/15 text-center">
+            <span id="cd-seconds" class="block text-sm sm:text-base font-extrabold leading-none tabular-nums text-white">00</span>
+            <span class="block text-[9px] uppercase tracking-wider text-lime-300 mt-0.5 font-bold">Seg</span>
+          </div>
+        </div>
+
+        <span id="offer-expired-badge" class="hidden inline-flex items-center px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-600 text-xs font-bold text-slate-200">
+          Oferta finalizada
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 2. ENCABEZADO Y BARRA DE ACCESOS RÁPIDOS STICKY ==================== -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 shadow-xs">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2.5 space-y-2">
+      <!-- Fila 1: Título, estado de stock y botón actualizar -->
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-navy-900 via-navy-800 to-emerald-700 text-lime-300 flex items-center justify-center shrink-0 shadow-xs">
+            <span class="text-lg sm:text-xl" aria-hidden="true">⚽</span>
+          </div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+              <h1 id="album-title" class="text-sm sm:text-lg font-black text-navy-900 tracking-tight truncate">
+                Álbum Mundial 2026 Panini
+              </h1>
+              <span id="stock-source-badge" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                Modo demostración
+              </span>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[11px] text-slate-500">
+              <span id="stock-available-text" class="font-bold text-emerald-700">0 disponibles</span>
+              <span>·</span>
+              <span id="stock-out-text" class="font-medium text-slate-500">0 agotadas</span>
+              <span id="last-updated-label" class="hidden sm:inline text-slate-400"></span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          id="reload-stock-btn"
+          type="button"
+          title="Actualizar stock desde Google Sheets"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-navy-900 hover:bg-navy-800 active:bg-navy-950 text-white text-xs font-bold transition-colors shrink-0 shadow-xs"
+        >
+          <svg id="reload-icon" class="w-3.5 h-3.5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span class="hidden sm:inline">Actualizar stock</span>
+          <span class="sm:hidden">Stock</span>
+        </button>
+      </div>
+
+      <!-- Fila 2: Accesos rápidos de salto suave (FWC y A..L con el color de cada grupo) -->
+      <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1 border-t border-slate-100">
+        <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 shrink-0 mr-0.5">Ir a:</span>
+        <div id="jump-bar" class="flex items-center gap-1 shrink-0">
+          <!-- Botones FWC, A..L generados dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 3. CONTENIDO PRINCIPAL ==================== -->
+  <main class="max-w-7xl mx-auto px-2.5 sm:px-4 pt-3 space-y-3">
+
+    <!-- Indicador de carga -->
+    <div id="loading-banner" class="hidden rounded-2xl bg-navy-900 text-white px-4 py-3 flex items-center justify-center gap-2.5 text-sm font-semibold shadow-sm">
+      <svg class="w-4 h-4 animate-spin text-lime-400" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+      </svg>
+      <span>Cargando stock en vivo desde Google Sheets...</span>
+    </div>
+
+    <!-- Banner de error si falla el enlace CSV -->
+    <div id="error-banner" class="hidden rounded-2xl bg-rose-50 border border-rose-200 p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="flex items-start gap-2.5 text-rose-900">
+        <svg class="w-5 h-5 text-rose-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <div class="text-xs sm:text-sm">
+          <p class="font-bold">No se pudo cargar tu Google Sheets CSV</p>
+          <p id="error-detail" class="text-rose-700 mt-0.5">Se mantiene el modo demostración para que el catálogo siga funcionando.</p>
+        </div>
+      </div>
+      <button
+        id="retry-load-btn"
+        type="button"
+        class="px-3.5 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold shrink-0 transition-colors"
+      >
+        Reintentar
+      </button>
+    </div>
+
+    <!-- Barra de herramientas: Buscador/Pegado rápido + Filtros + Interruptor de vista + Leyenda -->
+    <section class="bg-white rounded-2xl border border-slate-200 p-3 sm:p-3.5 shadow-xs space-y-2.5">
+      <!-- Buscador / pegado rápido -->
+      <div class="flex flex-col sm:flex-row gap-2">
+        <div class="relative flex-1">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+            </svg>
+          </span>
+          <input
+            id="search-paste-input"
+            type="text"
+            placeholder="Buscar país/código o pegar lista: 00, FWC1, MEX01, MEX 5, ARG10"
+            class="w-full pl-9 pr-9 py-2 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-navy-800 focus:ring-2 focus:ring-lime-300/60 outline-none text-sm transition-all"
+          />
+          <button
+            id="clear-input-btn"
+            type="button"
+            aria-label="Limpiar búsqueda"
+            class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-700"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <button
+          id="mark-list-btn"
+          type="button"
+          class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-navy-900 hover:bg-navy-800 active:bg-navy-950 text-lime-300 font-bold text-xs sm:text-sm shadow-xs transition-colors shrink-0"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Marcar disponibles</span>
+        </button>
+      </div>
+
+      <!-- Aviso de resultado de pegado rápido -->
+      <div id="paste-feedback" class="hidden rounded-xl bg-slate-50 border border-slate-200 p-2.5 text-xs space-y-1 relative">
+        <button
+          id="close-feedback-btn"
+          type="button"
+          aria-label="Cerrar aviso"
+          class="absolute top-2 right-2 p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200/70"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div id="paste-feedback-body" class="pr-6 space-y-1"></div>
+      </div>
+
+      <!-- Fila de filtros rápidos -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-0.5">
+        <div id="filter-pills" class="flex flex-wrap items-center gap-1.5">
+          <!-- Filtros: Todas, Disponibles, Especiales, Seleccionadas -->
+        </div>
+        <span id="view-hint-text" class="text-[11px] text-slate-500 font-semibold">
+          2 filas por país: 1–10 arriba · 11–20 abajo
+        </span>
+      </div>
+
+      <!-- Leyenda compacta de estados -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-slate-100 text-[11px] font-semibold text-slate-600">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span class="inline-flex items-center gap-1">
+            <span class="w-3.5 h-3.5 rounded bg-white border border-slate-300 inline-block"></span>
+            Normal
+          </span>
+          <span class="inline-flex items-center gap-1">
+            <span class="w-3.5 h-3.5 rounded bg-amber-50 border-2 border-amber-400 inline-block"></span>
+            Especial ★
+          </span>
+          <span class="inline-flex items-center gap-1">
+            <span class="w-3.5 h-3.5 rounded bg-emerald-500 border border-emerald-600 inline-block"></span>
+            Seleccionada
+          </span>
+          <span class="inline-flex items-center gap-1">
+            <span class="w-3.5 h-3.5 rounded bg-slate-200 border border-slate-300 inline-block opacity-70"></span>
+            Agotada
+          </span>
+        </div>
+        <span class="text-[11px] text-slate-400 font-medium">
+          Toca cualquier número para agregarlo a tu pedido
+        </span>
+      </div>
+    </section>
+
+    <!-- ==================== LISTA CONTINUA EN 2 FILAS POR PAÍS (980 FIGURITAS) ==================== -->
+    <section aria-label="Lista completa del Álbum Mundial 2026 Panini">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+        <div id="rows-container" class="divide-y divide-slate-200">
+          <!-- Bloque FWC + 48 bloques de países (2 filas de 10 por país) generados dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Estado vacío cuando un filtro o búsqueda no devuelve resultados -->
+      <div id="empty-state" class="hidden mt-3 bg-white rounded-2xl border border-slate-200 p-8 text-center">
+        <div class="w-11 h-11 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-2.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+          </svg>
+        </div>
+        <h2 class="text-sm font-bold text-navy-900">No hay figuritas que coincidan</h2>
+        <p class="text-xs text-slate-500 mt-1">Prueba quitando el filtro activo o limpiando tu búsqueda.</p>
+        <button
+          id="reset-filters-btn"
+          type="button"
+          class="mt-3 px-4 py-2 rounded-xl bg-navy-900 hover:bg-navy-800 text-lime-300 text-xs font-bold transition-colors"
+        >
+          Mostrar todo el álbum
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 4. BARRA INFERIOR FIJA (STICKY BAR) ==================== -->
+  <footer class="fixed bottom-0 inset-x-0 z-40 bg-navy-950/95 backdrop-blur-md border-t border-lime-400/25 text-white shadow-[0_-6px_24px_rgba(7,17,32,0.28)]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3">
+      <div class="flex items-center justify-between gap-2 sm:gap-4">
+        <!-- Resumen interactivo de pedido -->
+        <button
+          id="open-detail-btn"
+          type="button"
+          class="flex items-center gap-2.5 sm:gap-3 text-left rounded-xl p-1.5 -ml-1.5 hover:bg-white/10 transition-colors min-w-0"
+          title="Ver detalle de tu pedido"
+        >
+          <div class="relative w-11 h-11 rounded-xl bg-navy-800 border border-lime-400/40 text-lime-300 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span id="sticky-count" class="absolute -top-1.5 -right-1.5 min-w-[22px] h-5 px-1 rounded-full bg-lime-400 text-navy-950 text-[11px] font-black flex items-center justify-center shadow-xs">
+              0
+            </span>
+          </div>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+              <span class="text-[11px] font-medium text-slate-300">
+                Suma: <span id="sticky-subtotal" class="font-semibold text-slate-300 line-through">S/ 0.00</span>
+              </span>
+              <span id="sticky-discount-pill" class="inline-flex items-center px-1.5 py-0.5 rounded-md bg-amber-400 text-navy-950 text-[10px] font-extrabold">
+                Descuento 20% (-S/ 0.00)
+              </span>
+            </div>
+            <div class="flex items-baseline gap-2 mt-0.5">
+              <p id="sticky-total" class="text-base sm:text-lg font-black text-lime-300 leading-tight truncate">
+                S/ 0.00
+              </p>
+              <span class="text-[11px] font-semibold text-sky-300 underline shrink-0">Ver detalle</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- Acciones: Limpiar + Enviar por WhatsApp -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button
+            id="clear-selection-btn"
+            type="button"
+            disabled
+            class="px-3 py-2.5 rounded-xl border border-white/20 text-slate-200 hover:text-rose-300 hover:border-rose-400/50 hover:bg-rose-500/10 disabled:opacity-35 disabled:pointer-events-none text-xs sm:text-sm font-bold transition-colors"
+          >
+            Limpiar
+          </button>
+
+          <button
+            id="whatsapp-btn"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600 text-navy-950 font-black text-xs sm:text-sm shadow-sm shadow-emerald-500/25 transition-all"
+          >
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.391c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.828 14.125c-.25.703-1.438 1.344-2 1.422-.516.078-1.172.109-1.891-.125-.438-.141-1-.328-1.719-.641-3.016-1.313-4.984-4.359-5.141-4.563-.141-.203-1.219-1.625-1.219-3.109s.766-2.203 1.047-2.5c.281-.297.609-.375.813-.375.203 0 .406.016.578.016.188 0 .438-.078.688.516.25.609.859 2.094.938 2.25.078.156.125.344.031.547-.094.203-.156.328-.313.5-.156.172-.313.391-.453.516-.156.141-.313.297-.141.594.172.297.766 1.266 1.656 2.063 1.141 1.016 2.109 1.328 2.406 1.484.297.156.469.125.641-.078.172-.203.75-.875.953-1.172.203-.297.406-.25.672-.156.266.094 1.719.813 2.016.953.297.156.5.219.578.344.078.125.078.734-.172 1.438z" />
+            </svg>
+            <span class="hidden sm:inline">Enviar pedido por WhatsApp</span>
+            <span class="sm:hidden">Pedir</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 5. MODAL DE DETALLE DEL PEDIDO ==================== -->
+  <div id="detail-modal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-navy-950/70 backdrop-blur-xs">
+    <div class="bg-white w-full sm:max-w-lg rounded-t-3xl sm:rounded-2xl shadow-2xl max-h-[86vh] flex flex-col overflow-hidden">
+      <div class="px-5 py-4 bg-navy-900 text-white flex items-center justify-between">
+        <div>
+          <h3 class="text-base font-extrabold tracking-tight">Detalle de tu pedido</h3>
+          <p id="modal-count-label" class="text-xs text-lime-300 font-semibold">0 figuritas seleccionadas</p>
+        </div>
+        <button
+          id="close-detail-btn"
+          type="button"
+          class="p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+          aria-label="Cerrar detalle"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="modal-body" class="p-4 sm:p-5 overflow-y-auto space-y-2.5 flex-1 bg-slate-50"></div>
+
+      <div class="px-5 py-4 bg-white border-t border-slate-200 space-y-3">
+        <div class="space-y-1.5 text-xs sm:text-sm">
+          <div class="flex items-center justify-between text-slate-600">
+            <span>Subtotal</span>
+            <span id="modal-subtotal" class="font-semibold">S/ 0.00</span>
+          </div>
+          <div id="modal-discount-row" class="flex items-center justify-between text-rose-600 font-bold">
+            <span id="modal-discount-label">Descuento (20%)</span>
+            <span id="modal-discount">-S/ 0.00</span>
+          </div>
+          <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-base font-black text-navy-900">
+            <span>Total a pagar</span>
+            <span id="modal-total" class="text-emerald-700">S/ 0.00</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2.5">
+          <button
+            id="copy-order-btn"
+            type="button"
+            class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-navy-900 text-sm font-bold transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span>Copiar texto</span>
+          </button>
+          <button
+            id="modal-whatsapp-btn"
+            type="button"
+            class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-navy-950 text-sm font-black transition-colors"
+          >
+            <span>Enviar por WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 6. MODAL DE CONFIRMACIÓN PARA LIMPIAR ==================== -->
+  <div id="confirm-clear-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-950/70 backdrop-blur-xs">
+    <div class="bg-white w-full max-w-sm rounded-2xl shadow-2xl p-5 space-y-4">
+      <div class="flex items-start gap-3">
+        <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-navy-900">¿Limpiar toda tu selección?</h3>
+          <p class="text-xs text-slate-500 mt-1">Se desmarcarán todas las figuritas que elegiste en la lista.</p>
+        </div>
+      </div>
+      <div class="flex justify-end gap-2">
+        <button
+          id="cancel-clear-btn"
+          type="button"
+          class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-colors"
+        >
+          Cancelar
+        </button>
+        <button
+          id="confirm-clear-btn"
+          type="button"
+          class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold transition-colors"
+        >
+          Sí, limpiar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 7. NOTIFICACIÓN FLOTANTE (TOAST) ==================== -->
+  <div id="toast" class="pointer-events-none fixed top-24 left-1/2 -translate-x-1/2 z-50 opacity-0 transition-opacity duration-200">
+    <div id="toast-content" class="px-4 py-2.5 rounded-xl bg-navy-900 border border-lime-400/40 text-lime-300 text-xs sm:text-sm font-bold shadow-xl whitespace-nowrap"></div>
+  </div>
+
+  <!-- ==================== 8. LÓGICA JAVASCRIPT ==================== -->
+  <script>
+    /* =========================================================================
+       1. CONFIGURACIÓN PRINCIPAL — EDITA SOLO ESTE BLOQUE
+       ========================================================================= */
+    const CONFIG = {
+      nombreAlbum: "Álbum Mundial 2026 Panini",
+      // Número de WhatsApp con código de país, sin "+" ni espacios (Ej. Perú: "51999999999")
+      whatsapp: "51999999999",
+      moneda: "S/",
+      // Precios por defecto (se usan si una fila en tu Google Sheet no especifica precio)
+      precioNormal: 1.00,
+      precioEspecial: 3.00,
+      // Porcentaje de descuento promocional sobre la suma total (usa 0 para desactivar)
+      descuentoPorcentaje: 20,
+      // Fecha y hora límite de la oferta en formato AAAA-MM-DDTHH:MM:SS
+      // Al vencer, el banner cambia a "Oferta finalizada" y el descuento pasa a 0% automáticamente.
+      ofertaFin: "2026-11-30T23:59:00",
+      // Pega aquí el enlace CSV de tu Google Sheet (Archivo → Compartir → Publicar en la web → CSV)
+      // Columnas esperadas en fila 1: codigo, tipo, precio, stock
+      // Si lo dejas vacío "", se activa el Modo Demostración con stock determinístico (fijo).
+      sheetCsvUrl: ""
+    };
+
+    /* =========================================================================
+       2. COLORES DISTINTIVOS POR GRUPO (FWC + A..L) Y ESTRUCTURA DE 980 FIGURITAS
+       ========================================================================= */
+    const GROUP_STYLES = {
+      FWC: {
+        badgeBg: "bg-amber-500 text-navy-950",
+        jumpBtn: "bg-amber-400 hover:bg-amber-500 text-navy-950 border-amber-500",
+        rowTint: "bg-amber-50/75",
+        stickyTint: "bg-amber-50",
+        borderLeft: "border-l-amber-500"
+      },
+      A: {
+        badgeBg: "bg-emerald-600 text-white",
+        jumpBtn: "bg-emerald-600 hover:bg-emerald-700 text-white border-emerald-700",
+        rowTint: "bg-emerald-50/45",
+        stickyTint: "bg-emerald-50",
+        borderLeft: "border-l-emerald-600"
+      },
+      B: {
+        badgeBg: "bg-rose-600 text-white",
+        jumpBtn: "bg-rose-600 hover:bg-rose-700 text-white border-rose-700",
+        rowTint: "bg-rose-50/45",
+        stickyTint: "bg-rose-50",
+        borderLeft: "border-l-rose-600"
+      },
+      C: {
+        badgeBg: "bg-yellow-400 text-slate-950",
+        jumpBtn: "bg-yellow-400 hover:bg-yellow-500 text-slate-950 border-yellow-500",
+        rowTint: "bg-yellow-50/55",
+        stickyTint: "bg-yellow-50",
+        borderLeft: "border-l-yellow-500"
+      },
+      D: {
+        badgeBg: "bg-blue-600 text-white",
+        jumpBtn: "bg-blue-600 hover:bg-blue-700 text-white border-blue-700",
+        rowTint: "bg-blue-50/45",
+        stickyTint: "bg-blue-50",
+        borderLeft: "border-l-blue-600"
+      },
+      E: {
+        badgeBg: "bg-slate-800 text-white",
+        jumpBtn: "bg-slate-800 hover:bg-slate-900 text-white border-slate-900",
+        rowTint: "bg-slate-100/75",
+        stickyTint: "bg-slate-100",
+        borderLeft: "border-l-slate-800"
+      },
+      F: {
+        badgeBg: "bg-orange-500 text-white",
+        jumpBtn: "bg-orange-500 hover:bg-orange-600 text-white border-orange-600",
+        rowTint: "bg-orange-50/50",
+        stickyTint: "bg-orange-50",
+        borderLeft: "border-l-orange-500"
+      },
+      G: {
+        badgeBg: "bg-purple-600 text-white",
+        jumpBtn: "bg-purple-600 hover:bg-purple-700 text-white border-purple-700",
+        rowTint: "bg-purple-50/45",
+        stickyTint: "bg-purple-50",
+        borderLeft: "border-l-purple-600"
+      },
+      H: {
+        badgeBg: "bg-red-600 text-white",
+        jumpBtn: "bg-red-600 hover:bg-red-700 text-white border-red-700",
+        rowTint: "bg-red-50/45",
+        stickyTint: "bg-red-50",
+        borderLeft: "border-l-red-600"
+      },
+      I: {
+        badgeBg: "bg-indigo-600 text-white",
+        jumpBtn: "bg-indigo-600 hover:bg-indigo-700 text-white border-indigo-700",
+        rowTint: "bg-indigo-50/45",
+        stickyTint: "bg-indigo-50",
+        borderLeft: "border-l-indigo-600"
+      },
+      J: {
+        badgeBg: "bg-sky-500 text-white",
+        jumpBtn: "bg-sky-500 hover:bg-sky-600 text-white border-sky-600",
+        rowTint: "bg-sky-50/55",
+        stickyTint: "bg-sky-50",
+        borderLeft: "border-l-sky-500"
+      },
+      K: {
+        badgeBg: "bg-teal-600 text-white",
+        jumpBtn: "bg-teal-600 hover:bg-teal-700 text-white border-teal-700",
+        rowTint: "bg-teal-50/45",
+        stickyTint: "bg-teal-50",
+        borderLeft: "border-l-teal-600"
+      },
+      L: {
+        badgeBg: "bg-fuchsia-600 text-white",
+        jumpBtn: "bg-fuchsia-600 hover:bg-fuchsia-700 text-white border-fuchsia-700",
+        rowTint: "bg-fuchsia-50/45",
+        stickyTint: "bg-fuchsia-50",
+        borderLeft: "border-l-fuchsia-600"
+      }
+    };
+
+    const GROUPS_DATA = [
+      { id: "A", countries: [
+        { code: "MEX", name: "México" },
+        { code: "RSA", name: "Sudáfrica" },
+        { code: "KOR", name: "Corea del Sur" },
+        { code: "CZE", name: "República Checa" }
+      ]},
+      { id: "B", countries: [
+        { code: "CAN", name: "Canadá" },
+        { code: "BIH", name: "Bosnia y Herzegovina" },
+        { code: "QAT", name: "Catar" },
+        { code: "SUI", name: "Suiza" }
+      ]},
+      { id: "C", countries: [
+        { code: "BRA", name: "Brasil" },
+        { code: "MAR", name: "Marruecos" },
+        { code: "HAI", name: "Haití" },
+        { code: "SCO", name: "Escocia" }
+      ]},
+      { id: "D", countries: [
+        { code: "USA", name: "Estados Unidos" },
+        { code: "PAR", name: "Paraguay" },
+        { code: "AUS", name: "Australia" },
+        { code: "TUR", name: "Turquía" }
+      ]},
+      { id: "E", countries: [
+        { code: "GER", name: "Alemania" },
+        { code: "CUW", name: "Curazao" },
+        { code: "CIV", name: "Costa de Marfil" },
+        { code: "ECU", name: "Ecuador" }
+      ]},
+      { id: "F", countries: [
+        { code: "NED", name: "Países Bajos" },
+        { code: "JPN", name: "Japón" },
+        { code: "SWE", name: "Suecia" },
+        { code: "TUN", name: "Túnez" }
+      ]},
+      { id: "G", countries: [
+        { code: "BEL", name: "Bélgica" },
+        { code: "EGY", name: "Egipto" },
+        { code: "IRN", name: "Irán" },
+        { code: "NZL", name: "Nueva Zelanda" }
+      ]},
+      { id: "H", countries: [
+        { code: "ESP", name: "España" },
+        { code: "CPV", name: "Cabo Verde" },
+        { code: "KSA", name: "Arabia Saudita" },
+        { code: "URU", name: "Uruguay" }
+      ]},
+      { id: "I", countries: [
+        { code: "FRA", name: "Francia" },
+        { code: "SEN", name: "Senegal" },
+        { code: "IRQ", name: "Irak" },
+        { code: "NOR", name: "Noruega" }
+      ]},
+      { id: "J", countries: [
+        { code: "ARG", name: "Argentina" },
+        { code: "ALG", name: "Argelia" },
+        { code: "AUT", name: "Austria" },
+        { code: "JOR", name: "Jordania" }
+      ]},
+      { id: "K", countries: [
+        { code: "POR", name: "Portugal" },
+        { code: "COD", name: "RD Congo" },
+        { code: "UZB", name: "Uzbekistán" },
+        { code: "COL", name: "Colombia" }
+      ]},
+      { id: "L", countries: [
+        { code: "ENG", name: "Inglaterra" },
+        { code: "CRO", name: "Croacia" },
+        { code: "GHA", name: "Ghana" },
+        { code: "PAN", name: "Panamá" }
+      ]}
+    ];
+
+    const FWC_CODES = [
+      "00", "FWC1", "FWC2", "FWC3", "FWC4", "FWC5", "FWC6", "FWC7", "FWC8", "FWC9",
+      "FWC10", "FWC11", "FWC12", "FWC13", "FWC14", "FWC15", "FWC16", "FWC17", "FWC18", "FWC19"
+    ];
+
+    const VALID_COUNTRY_CODES = new Set(
+      GROUPS_DATA.flatMap((g) => g.countries.map((c) => c.code))
+    );
+
+    const STORAGE_KEY = "mundial2026_panini_lista_v1";
+
+    /* =========================================================================
+       3. ESTADO DE LA APLICACIÓN Y REFERENCIAS AL DOM
+       ========================================================================= */
+    const state = {
+      rows: [],           // 49 bloques: 1 FWC + 48 países
+      stickers: [],       // 980 figuritas planas
+      stickerMap: new Map(),
+      selected: new Set(),
+      filter: "all",      // "all" | "available" | "special" | "selected"
+      searchRaw: "",
+      isLiveStock: false,
+      isLoading: false,
+      offerExpired: false,
+      offerTimerId: null
+    };
+
+    const dom = {
+      offerBanner: document.getElementById("offer-banner"),
+      offerTitle: document.getElementById("offer-title"),
+      offerEndDate: document.getElementById("offer-end-date"),
+      offerCountdownLabel: document.getElementById("offer-countdown-label"),
+      offerCountdownWrap: document.getElementById("offer-countdown-wrap"),
+      offerExpiredBadge: document.getElementById("offer-expired-badge"),
+      cdDays: document.getElementById("cd-days"),
+      cdHours: document.getElementById("cd-hours"),
+      cdMinutes: document.getElementById("cd-minutes"),
+      cdSeconds: document.getElementById("cd-seconds"),
+      albumTitle: document.getElementById("album-title"),
+      stockSourceBadge: document.getElementById("stock-source-badge"),
+      stockAvailableText: document.getElementById("stock-available-text"),
+      stockOutText: document.getElementById("stock-out-text"),
+      lastUpdatedLabel: document.getElementById("last-updated-label"),
+      reloadStockBtn: document.getElementById("reload-stock-btn"),
+      reloadIcon: document.getElementById("reload-icon"),
+      jumpBar: document.getElementById("jump-bar"),
+      loadingBanner: document.getElementById("loading-banner"),
+      errorBanner: document.getElementById("error-banner"),
+      errorDetail: document.getElementById("error-detail"),
+      retryLoadBtn: document.getElementById("retry-load-btn"),
+      searchPasteInput: document.getElementById("search-paste-input"),
+      clearInputBtn: document.getElementById("clear-input-btn"),
+      markListBtn: document.getElementById("mark-list-btn"),
+      pasteFeedback: document.getElementById("paste-feedback"),
+      pasteFeedbackBody: document.getElementById("paste-feedback-body"),
+      closeFeedbackBtn: document.getElementById("close-feedback-btn"),
+      filterPills: document.getElementById("filter-pills"),
+      rowsContainer: document.getElementById("rows-container"),
+      emptyState: document.getElementById("empty-state"),
+      resetFiltersBtn: document.getElementById("reset-filters-btn"),
+      openDetailBtn: document.getElementById("open-detail-btn"),
+      stickyCount: document.getElementById("sticky-count"),
+      stickySubtotal: document.getElementById("sticky-subtotal"),
+      stickyDiscountPill: document.getElementById("sticky-discount-pill"),
+      stickyTotal: document.getElementById("sticky-total"),
+      clearSelectionBtn: document.getElementById("clear-selection-btn"),
+      whatsappBtn: document.getElementById("whatsapp-btn"),
+      detailModal: document.getElementById("detail-modal"),
+      closeDetailBtn: document.getElementById("close-detail-btn"),
+      modalCountLabel: document.getElementById("modal-count-label"),
+      modalBody: document.getElementById("modal-body"),
+      modalSubtotal: document.getElementById("modal-subtotal"),
+      modalDiscountRow: document.getElementById("modal-discount-row"),
+      modalDiscountLabel: document.getElementById("modal-discount-label"),
+      modalDiscount: document.getElementById("modal-discount"),
+      modalTotal: document.getElementById("modal-total"),
+      copyOrderBtn: document.getElementById("copy-order-btn"),
+      modalWhatsappBtn: document.getElementById("modal-whatsapp-btn"),
+      confirmClearModal: document.getElementById("confirm-clear-modal"),
+      cancelClearBtn: document.getElementById("cancel-clear-btn"),
+      confirmClearBtn: document.getElementById("confirm-clear-btn"),
+      toast: document.getElementById("toast"),
+      toastContent: document.getElementById("toast-content")
+    };
+
+    let toastTimer = null;
+
+    /* =========================================================================
+       4. UTILIDADES, NORMALIZADOR DE CÓDIGOS Y CONSTRUCCIÓN DEL ÁLBUM (980)
+       ========================================================================= */
+    function formatMoney(amount) {
+      return `${CONFIG.moneda} ${Number(amount).toFixed(2)}`;
+    }
+
+    function normalizeText(value) {
+      return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+    }
+
+    /**
+     * Normalizador flexible de códigos del Mundial 2026:
+     * Acepta: "00", "0", "FWC1", "FWC01", "FWC 1", "MEX1", "MEX01", "MEX 01", "MEX-01"
+     * Devuelve el código canónico: "00", "FWC1".."FWC19", "MEX01".."PAN20"
+     */
+    function normalizeAlbumCode(raw) {
+      if (!raw) return null;
+      const cleaned = String(raw)
+        .toUpperCase()
+        .trim()
+        .replace(/[\s\-_#]+/g, "");
+
+      if (!cleaned) return null;
+
+      if (cleaned === "00" || cleaned === "0" || cleaned === "FWC00" || cleaned === "FWC0") {
+        return "00";
+      }
+
+      const fwcMatch = cleaned.match(/^FWC0*(\d{1,2})$/);
+      if (fwcMatch) {
+        const n = parseInt(fwcMatch[1], 10);
+        if (n >= 1 && n <= 19) return `FWC${n}`;
+        return null;
+      }
+
+      const countryMatch = cleaned.match(/^([A-Z]{3})0*(\d{1,2})$/);
+      if (countryMatch) {
+        const prefix = countryMatch[1];
+        const n = parseInt(countryMatch[2], 10);
+        if (VALID_COUNTRY_CODES.has(prefix) && n >= 1 && n <= 20) {
+          return `${prefix}${String(n).padStart(2, "0")}`;
+        }
+      }
+
+      return null;
+    }
+
+    /**
+     * Construye las 49 filas (980 figuritas exactas).
+     * En demoMode = true, el stock es 100% DETERMINÍSTICO (sin Math.random) para que nunca varíe al recargar.
+     */
+    function buildBaseAlbum(demoMode = true) {
+      const rows = [];
+      const stickers = [];
+      const stickerMap = new Map();
+      let idx = 0;
+
+      // 1) Fila FWC (Especiales: 00, FWC1..FWC19)
+      const fwcItems = FWC_CODES.map((code, i) => {
+        idx++;
+        const demoStock = demoMode ? ((idx * 7 + 2) % 4 === 0 ? 0 : (idx % 3) + 1) : 0;
+        const shortLabel = i === 0 ? "00" : `F${i}`;
+        const item = {
+          code,
+          shortLabel,
+          waShort: code,
+          rowId: "FWC",
+          countryName: "Especiales FWC",
+          groupId: "FWC",
+          isSpecial: true,
+          price: CONFIG.precioEspecial,
+          stock: demoStock,
+          available: demoStock > 0,
+          order: idx
+        };
+        stickers.push(item);
+        stickerMap.set(code, item);
+        return item;
+      });
+
+      rows.push({
+        id: "FWC",
+        groupId: "FWC",
+        groupDisplay: "★",
+        countryCode: "FWC",
+        countryName: "Especiales FWC",
+        isFirstInGroup: true,
+        isLastInGroup: true,
+        items: fwcItems
+      });
+
+      // 2) 12 Grupos (A..L) x 4 países = 48 bloques x 20 números (01..20) = 960 figuritas
+      GROUPS_DATA.forEach((group) => {
+        group.countries.forEach((country, cIndex) => {
+          const items = [];
+          for (let n = 1; n <= 20; n++) {
+            idx++;
+            const numPadded = String(n).padStart(2, "0");
+            const code = `${country.code}${numPadded}`;
+            // En modo demo, la #01 (escudo) es Especial; el resto Normales
+            const defaultSpecial = demoMode ? n === 1 : false;
+            const demoStock = demoMode
+              ? ((idx * 11 + n * 3) % 5 === 0 ? 0 : ((idx + n) % 4) + 1)
+              : 0;
+
+            const item = {
+              code,
+              shortLabel: numPadded,
+              waShort: numPadded,
+              rowId: country.code,
+              countryName: country.name,
+              groupId: group.id,
+              isSpecial: defaultSpecial,
+              price: defaultSpecial ? CONFIG.precioEspecial : CONFIG.precioNormal,
+              stock: demoStock,
+              available: demoStock > 0,
+              order: idx
+            };
+            stickers.push(item);
+            stickerMap.set(code, item);
+            items.push(item);
+          }
+
+          rows.push({
+            id: country.code,
+            groupId: group.id,
+            groupDisplay: group.id,
+            countryCode: country.code,
+            countryName: country.name,
+            isFirstInGroup: cIndex === 0,
+            isLastInGroup: cIndex === group.countries.length - 1,
+            items
+          });
+        });
+      });
+
+      return { rows, stickers, stickerMap };
+    }
+
+    function showToast(message) {
+      dom.toastContent.textContent = message;
+      dom.toast.classList.remove("opacity-0");
+      dom.toast.classList.add("opacity-100");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        dom.toast.classList.remove("opacity-100");
+        dom.toast.classList.add("opacity-0");
+      }, 2400);
+    }
+
+    function saveSelection() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(state.selected)));
+      } catch (err) {
+        // Ignorar si localStorage no está disponible
+      }
+    }
+
+    function restoreSelection() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) return;
+        parsed.forEach((code) => {
+          const item = state.stickerMap.get(code);
+          if (item && item.available) state.selected.add(code);
+        });
+      } catch (err) {
+        // Ignorar errores de almacenamiento
+      }
+    }
+
+    function pruneUnavailableSelection() {
+      let removed = 0;
+      state.selected.forEach((code) => {
+        const item = state.stickerMap.get(code);
+        if (!item || !item.available) {
+          state.selected.delete(code);
+          removed++;
+        }
+      });
+      if (removed > 0) {
+        saveSelection();
+        showToast(`Se quitaron ${removed} figurita(s) agotadas de tu selección`);
+      }
+    }
+
+    /* =========================================================================
+       5. PARSER CSV ROBUSTO Y CONEXIÓN EN VIVO A GOOGLE SHEETS
+       ========================================================================= */
+    function detectDelimiter(csvText) {
+      const firstLine = csvText.split(/\r?\n/).find((l) => l.trim().length > 0) || "";
+      let inQuotes = false;
+      let commas = 0;
+      let semicolons = 0;
+      for (let i = 0; i < firstLine.length; i++) {
+        const ch = firstLine[i];
+        if (ch === '"') inQuotes = !inQuotes;
+        else if (!inQuotes) {
+          if (ch === ",") commas++;
+          else if (ch === ";") semicolons++;
+        }
+      }
+      return semicolons > commas ? ";" : ",";
+    }
+
+    function parseCsv(csvText) {
+      const cleanText = csvText.replace(/^\uFEFF/, "");
+      const delimiter = detectDelimiter(cleanText);
+      const rows = [];
+      let currentRow = [];
+      let currentField = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < cleanText.length; i++) {
+        const ch = cleanText[i];
+        const next = cleanText[i + 1];
+
+        if (inQuotes) {
+          if (ch === '"' && next === '"') {
+            currentField += '"';
+            i++;
+          } else if (ch === '"') {
+            inQuotes = false;
+          } else {
+            currentField += ch;
+          }
+        } else {
+          if (ch === '"') {
+            inQuotes = true;
+          } else if (ch === delimiter) {
+            currentRow.push(currentField.trim());
+            currentField = "";
+          } else if (ch === "\r" && next === "\n") {
+            currentRow.push(currentField.trim());
+            rows.push(currentRow);
+            currentRow = [];
+            currentField = "";
+            i++;
+          } else if (ch === "\n" || ch === "\r") {
+            currentRow.push(currentField.trim());
+            rows.push(currentRow);
+            currentRow = [];
+            currentField = "";
+          } else {
+            currentField += ch;
+          }
+        }
+      }
+
+      if (currentField.length > 0 || currentRow.length > 0) {
+        currentRow.push(currentField.trim());
+        rows.push(currentRow);
+      }
+
+      return rows.filter((row) => row.some((cell) => cell !== ""));
+    }
+
+    function parsePrice(rawValue, isSpecial) {
+      const cleaned = String(rawValue || "")
+        .replace(/[^\d.,-]/g, "")
+        .replace(",", ".");
+      const parsed = parseFloat(cleaned);
+      if (Number.isFinite(parsed) && parsed > 0) return parsed;
+      return isSpecial ? CONFIG.precioEspecial : CONFIG.precioNormal;
+    }
+
+    function parseStock(rawValue) {
+      const norm = normalizeText(rawValue);
+      if (!norm) return 0;
+      if (["si", "yes", "true", "disponible", "ok", "x", "hay"].includes(norm)) return 1;
+      if (["no", "false", "agotada", "agotado", "sin stock", "-"].includes(norm)) return 0;
+      const numeric = parseInt(norm.replace(/[^\d-]/g, ""), 10);
+      return Number.isFinite(numeric) && numeric > 0 ? numeric : 0;
+    }
+
+    function updateStockSourceBadge(isLive) {
+      state.isLiveStock = isLive;
+      if (isLive) {
+        dom.stockSourceBadge.className =
+          "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-emerald-100 text-emerald-900 border border-emerald-300";
+        dom.stockSourceBadge.innerHTML =
+          '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Stock en vivo (Google Sheets)';
+      } else {
+        dom.stockSourceBadge.className =
+          "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300";
+        dom.stockSourceBadge.innerHTML =
+          '<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Modo demostración';
+      }
+    }
+
+    function applyCsvToAlbum(csvRows) {
+      if (!csvRows || csvRows.length < 2) {
+        throw new Error("La hoja CSV está vacía o no contiene filas de datos.");
+      }
+
+      const headers = csvRows[0].map((h) => normalizeText(h));
+      const idxCode = headers.findIndex((h) =>
+        ["codigo", "code", "numero", "num", "nro", "n", "figurita", "figura", "id"].includes(h)
+      );
+      const idxTipo = headers.findIndex((h) =>
+        ["tipo", "categoria", "clase", "especial"].includes(h)
+      );
+      const idxPrecio = headers.findIndex((h) =>
+        ["precio", "valor", "costo", "price"].includes(h)
+      );
+      const idxStock = headers.findIndex((h) =>
+        ["stock", "cantidad", "cant", "disponible", "estado", "qty"].includes(h)
+      );
+
+      if (idxCode === -1) {
+        throw new Error('No se encontró la columna "codigo" (o "numero") en la fila 1 de tu Google Sheet.');
+      }
+
+      const base = buildBaseAlbum(false);
+      let matched = 0;
+
+      for (let r = 1; r < csvRows.length; r++) {
+        const row = csvRows[r];
+        const code = normalizeAlbumCode(row[idxCode]);
+        if (!code) continue;
+
+        const item = base.stickerMap.get(code);
+        if (!item) continue;
+
+        const rawTipo = idxTipo !== -1 ? normalizeText(row[idxTipo]) : "";
+        let isSpecial = item.groupId === "FWC";
+        if (rawTipo) {
+          if (
+            rawTipo.includes("esp") ||
+            rawTipo.includes("dorad") ||
+            rawTipo.includes("holo") ||
+            rawTipo.includes("brill") ||
+            rawTipo.includes("escud")
+          ) {
+            isSpecial = true;
+          } else if (rawTipo.includes("norm") || rawTipo.includes("comun")) {
+            isSpecial = false;
+          }
+        }
+
+        const price = parsePrice(idxPrecio !== -1 ? row[idxPrecio] : "", isSpecial);
+        const stock = idxStock !== -1 ? parseStock(row[idxStock]) : 1;
+
+        item.isSpecial = isSpecial;
+        item.price = price;
+        item.stock = stock;
+        item.available = stock > 0;
+        matched++;
+      }
+
+      if (matched === 0) {
+        throw new Error("No se encontraron códigos válidos del Mundial 2026 (ej: 00, FWC1, MEX01, ARG10).");
+      }
+
+      return base;
+    }
+
+    async function loadStock(isManualReload = false) {
+      const url = String(CONFIG.sheetCsvUrl || "").trim();
+      dom.errorBanner.classList.add("hidden");
+
+      if (!url) {
+        const demo = buildBaseAlbum(true);
+        state.rows = demo.rows;
+        state.stickers = demo.stickers;
+        state.stickerMap = demo.stickerMap;
+        updateStockSourceBadge(false);
+        if (!isManualReload) restoreSelection();
+        pruneUnavailableSelection();
+        renderAll();
+        if (isManualReload) showToast("Modo demostración activo (stock fijo)");
+        return;
+      }
+
+      state.isLoading = true;
+      dom.loadingBanner.classList.remove("hidden");
+      dom.reloadIcon.classList.add("animate-spin");
+      dom.reloadStockBtn.disabled = true;
+
+      try {
+        const sep = url.includes("?") ? "&" : "?";
+        const response = await fetch(`${url}${sep}_t=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`El servidor respondió con código ${response.status}.`);
+
+        const csvText = await response.text();
+        if (csvText.trim().startsWith("<!DOCTYPE") || csvText.trim().startsWith("<html")) {
+          throw new Error("El enlace devolvió HTML en lugar de CSV. Usa Archivo → Compartir → Publicar en la web → CSV.");
+        }
+
+        const parsedRows = parseCsv(csvText);
+        const liveData = applyCsvToAlbum(parsedRows);
+
+        state.rows = liveData.rows;
+        state.stickers = liveData.stickers;
+        state.stickerMap = liveData.stickerMap;
+        updateStockSourceBadge(true);
+
+        if (!isManualReload) restoreSelection();
+        pruneUnavailableSelection();
+
+        const now = new Date();
+        dom.lastUpdatedLabel.textContent = `· Act. ${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
+        dom.lastUpdatedLabel.classList.remove("hidden");
+
+        renderAll();
+        if (isManualReload) showToast("Stock actualizado en vivo");
+      } catch (err) {
+        dom.errorDetail.textContent =
+          err && err.message ? err.message : "Verifica que tu hoja esté publicada como CSV.";
+        dom.errorBanner.classList.remove("hidden");
+
+        if (state.stickers.length === 0) {
+          const demo = buildBaseAlbum(true);
+          state.rows = demo.rows;
+          state.stickers = demo.stickers;
+          state.stickerMap = demo.stickerMap;
+          updateStockSourceBadge(false);
+          restoreSelection();
+          pruneUnavailableSelection();
+          renderAll();
+        }
+      } finally {
+        state.isLoading = false;
+        dom.loadingBanner.classList.add("hidden");
+        dom.reloadIcon.classList.remove("animate-spin");
+        dom.reloadStockBtn.disabled = false;
+      }
+    }
+
+    /* =========================================================================
+       6. BANNER DE OFERTA, CONTADOR REGRESIVO Y RESUMEN DE WHATSAPP
+       ========================================================================= */
+    function parseOfferEndDate() {
+      if (!CONFIG.ofertaFin) return null;
+      const d = new Date(CONFIG.ofertaFin);
+      return Number.isNaN(d.getTime()) ? null : d;
+    }
+
+    function formatOfferEndDate(date) {
+      const meses = [
+        "enero", "febrero", "marzo", "abril", "mayo", "junio",
+        "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+      ];
+      return `Termina el ${date.getDate()} de ${meses[date.getMonth()]} de ${date.getFullYear()} a las ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+    }
+
+    function getActiveDiscountPercent() {
+      const configured = Number(CONFIG.descuentoPorcentaje);
+      if (!Number.isFinite(configured) || configured <= 0) return 0;
+      if (state.offerExpired) return 0;
+      return configured;
+    }
+
+    function applyExpiredOfferUI() {
+      dom.offerBanner.classList.remove("from-navy-950", "via-navy-900", "to-navy-800", "border-lime-400/30");
+      dom.offerBanner.classList.add("from-slate-800", "via-slate-800", "to-slate-700", "border-slate-600");
+      dom.offerTitle.textContent = "Oferta finalizada";
+      dom.offerTitle.classList.remove("text-lime-300");
+      dom.offerTitle.classList.add("text-slate-200");
+      dom.offerEndDate.textContent = "El período promocional ha concluido.";
+      dom.offerCountdownLabel.classList.add("hidden");
+      dom.offerCountdownWrap.classList.add("hidden");
+      dom.offerExpiredBadge.classList.remove("hidden");
+    }
+
+    function updateOfferCountdown() {
+      const configured = Number(CONFIG.descuentoPorcentaje);
+      const endDate = parseOfferEndDate();
+      if (!Number.isFinite(configured) || configured <= 0 || !endDate) {
+        dom.offerBanner.classList.add("hidden");
+        return;
+      }
+
+      const diffMs = endDate.getTime() - Date.now();
+      if (diffMs <= 0) {
+        const wasActive = !state.offerExpired;
+        state.offerExpired = true;
+        applyExpiredOfferUI();
+        if (state.offerTimerId) {
+          clearInterval(state.offerTimerId);
+          state.offerTimerId = null;
+        }
+        if (wasActive) {
+          renderStickyBar();
+          if (!dom.detailModal.classList.contains("hidden")) renderDetailModal();
+        }
+        return;
+      }
+
+      const totalSec = Math.floor(diffMs / 1000);
+      dom.cdDays.textContent = String(Math.floor(totalSec / 86400)).padStart(2, "0");
+      dom.cdHours.textContent = String(Math.floor((totalSec % 86400) / 3600)).padStart(2, "0");
+      dom.cdMinutes.textContent = String(Math.floor((totalSec % 3600) / 60)).padStart(2, "0");
+      dom.cdSeconds.textContent = String(totalSec % 60).padStart(2, "0");
+    }
+
+    function initOfferBanner() {
+      const configured = Number(CONFIG.descuentoPorcentaje);
+      const endDate = parseOfferEndDate();
+      if (!Number.isFinite(configured) || configured <= 0 || !endDate) {
+        dom.offerBanner.classList.add("hidden");
+        return;
+      }
+      dom.offerTitle.textContent = `OFERTA "DESCUENTO ${configured}%"`;
+      dom.offerEndDate.textContent = formatOfferEndDate(endDate);
+      updateOfferCountdown();
+      if (!state.offerExpired) {
+        state.offerTimerId = setInterval(updateOfferCountdown, 1000);
+      }
+    }
+
+    function getOrderSummary() {
+      const grouped = [];
+      let totalCount = 0;
+      let subtotal = 0;
+
+      state.rows.forEach((row) => {
+        const chosen = row.items.filter((it) => state.selected.has(it.code) && it.available);
+        if (chosen.length > 0) {
+          const secSub = chosen.reduce((acc, it) => acc + it.price, 0);
+          grouped.push({
+            id: row.id,
+            groupId: row.groupId,
+            groupDisplay: row.groupDisplay,
+            countryCode: row.countryCode,
+            countryName: row.countryName,
+            items: chosen,
+            subtotal: secSub
+          });
+          totalCount += chosen.length;
+          subtotal += secSub;
+        }
+      });
+
+      const discountPercent = getActiveDiscountPercent();
+      const discountAmount = subtotal * (discountPercent / 100);
+      const totalPrice = Math.max(0, subtotal - discountAmount);
+
+      return { grouped, totalCount, subtotal, discountPercent, discountAmount, totalPrice };
+    }
+
+    function buildWhatsAppMessage() {
+      const summary = getOrderSummary();
+      if (summary.totalCount === 0) return "";
+
+      const lines = [];
+      lines.push(`¡Hola! ⚽ Quisiera hacer un pedido para el *${CONFIG.nombreAlbum}*:`);
+      lines.push("");
+
+      summary.grouped.forEach((g) => {
+        const nums = g.items
+          .map((it) => {
+            if (g.countryCode === "FWC") return it.code;
+            return it.isSpecial ? `${it.waShort}⭐` : it.waShort;
+          })
+          .join(", ");
+        lines.push(`• *${g.countryCode}:* ${nums}`);
+      });
+
+      lines.push("");
+      lines.push(`📦 *Cantidad total:* ${summary.totalCount} figuritas`);
+      lines.push(`💵 *Subtotal:* ${formatMoney(summary.subtotal)}`);
+      if (summary.discountPercent > 0) {
+        lines.push(`🏷️ *Descuento ${summary.discountPercent}%:* -${formatMoney(summary.discountAmount)}`);
+      }
+      lines.push(`💰 *Total a pagar:* ${formatMoney(summary.totalPrice)}`);
+      lines.push("");
+      lines.push("¿Me confirmas disponibilidad y forma de entrega? ¡Gracias!");
+
+      return lines.join("\n");
+    }
+
+    /* =========================================================================
+       7. RENDERIZADO DE ACCESOS RÁPIDOS, FILTROS, LISTA COMPACTA Y MODALES
+       ========================================================================= */
+    function renderJumpBar() {
+      const keys = ["FWC", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
+      dom.jumpBar.innerHTML = "";
+
+      keys.forEach((key) => {
+        const style = GROUP_STYLES[key];
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `px-2.5 py-1 rounded-lg text-[11px] font-black border shadow-2xs transition-transform active:scale-95 shrink-0 ${style.jumpBtn}`;
+        btn.textContent = key === "FWC" ? "★ FWC" : key;
+        btn.title = key === "FWC" ? "Ir a Especiales FWC" : `Ir al Grupo ${key}`;
+        btn.addEventListener("click", () => {
+          const target = document.getElementById(`group-anchor-${key}`);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else {
+            showToast(`No hay filas visibles del ${key === "FWC" ? "FWC" : "Grupo " + key} con el filtro actual`);
+          }
+        });
+        dom.jumpBar.appendChild(btn);
+      });
+    }
+
+    function renderHeaderStats() {
+      let availableCount = 0;
+      let outCount = 0;
+      state.stickers.forEach((it) => {
+        if (it.available) availableCount++;
+        else outCount++;
+      });
+      dom.stockAvailableText.textContent = `${availableCount} disponibles`;
+      dom.stockOutText.textContent = `${outCount} agotadas`;
+    }
+
+    function renderFilterPills() {
+      const availableCount = state.stickers.filter((s) => s.available).length;
+      const specialCount = state.stickers.filter((s) => s.isSpecial).length;
+      const selectedCount = state.selected.size;
+
+      const filters = [
+        { id: "all", label: "Todas", count: state.stickers.length },
+        { id: "available", label: "Disponibles", count: availableCount },
+        { id: "special", label: "Especiales", count: specialCount },
+        { id: "selected", label: "Seleccionadas", count: selectedCount }
+      ];
+
+      dom.filterPills.innerHTML = "";
+      filters.forEach((f) => {
+        const isActive = state.filter === f.id;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = isActive
+          ? "inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-navy-900 text-lime-300 text-xs font-bold transition-colors shadow-2xs"
+          : "inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors";
+        btn.innerHTML = `<span>${f.label}</span><span class="px-1.5 rounded-full text-[10px] ${
+          isActive ? "bg-white/15 text-white" : "bg-white text-slate-600"
+        }">${f.count}</span>`;
+        btn.addEventListener("click", () => {
+          state.filter = f.id;
+          renderFilterPills();
+          renderTableRows();
+        });
+        dom.filterPills.appendChild(btn);
+      });
+    }
+
+    function buildSearchMatcher(rawQuery) {
+      const q = rawQuery.trim();
+      if (!q) return null;
+
+      const multiTokens = q.split(/[,;\n]+/).map((s) => s.trim()).filter(Boolean);
+      const exactCodes = new Set();
+      if (multiTokens.length > 1) {
+        multiTokens.forEach((tok) => {
+          const norm = normalizeAlbumCode(tok);
+          if (norm) exactCodes.add(norm);
+        });
+        if (exactCodes.size > 0) return (item) => exactCodes.has(item.code);
+      }
+
+      const normExact = normalizeAlbumCode(q);
+      const qLower = normalizeText(q);
+      const qCompact = q.toUpperCase().replace(/[\s\-_]+/g, "");
+
+      return (item) => {
+        if (normExact && item.code === normExact) return true;
+        if (item.code.includes(qCompact)) return true;
+        if (normalizeText(item.rowId).includes(qLower)) return true;
+        if (normalizeText(item.countryName).includes(qLower)) return true;
+        if (qLower.length === 1 && item.groupId.toLowerCase() === qLower) return true;
+        return false;
+      };
+    }
+
+    /**
+     * Genera el botón amplio de cada figurita (mínimo 54px de alto)
+     * con el número en grande arriba y el precio (o "Agot.") siempre visible debajo.
+     */
+    function createStickerCell(item, isVisibleByFilter) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.dataset.code = item.code;
+
+      const tipoLabel = item.isSpecial ? "Especial" : "Normal";
+      const stockLabel = item.available ? `Stock: ${item.stock}` : "Agotada";
+      const priceText = formatMoney(item.price);
+      btn.title = `${item.code} (${item.countryName}) · ${tipoLabel} · ${priceText} · ${stockLabel}`;
+
+      const baseSize = "w-full min-h-[54px] px-1 py-1.5 rounded-xl flex flex-col items-center justify-center leading-tight select-none transition-all";
+
+      // Si un filtro oculta este número dentro de un país visible, mantenemos la alineación de 10 columnas
+      if (!isVisibleByFilter) {
+        btn.disabled = true;
+        btn.className = `${baseSize} border border-dashed border-slate-200 bg-transparent text-slate-300 opacity-35 cursor-default`;
+        btn.innerHTML = `
+          <span class="text-xs font-semibold">${item.shortLabel}</span>
+          <span class="text-[10px] mt-0.5">—</span>
+        `;
+        return btn;
+      }
+
+      const isSelected = state.selected.has(item.code);
+
+      if (!item.available) {
+        // Estado: AGOTADA
+        btn.disabled = true;
+        btn.className = `${baseSize} relative bg-slate-200/80 border border-slate-300 text-slate-400 cursor-not-allowed opacity-75`;
+        btn.setAttribute("aria-label", `${item.code} agotada`);
+        btn.innerHTML = `
+          <span class="text-sm font-bold line-through">${item.shortLabel}</span>
+          <span class="text-[10px] font-bold text-slate-500 mt-0.5">Agot.</span>
+        `;
+      } else if (isSelected) {
+        // Estado: SELECCIONADA (verde vibrante con número y precio visibles en blanco)
+        btn.className = `${baseSize} relative bg-emerald-500 hover:bg-emerald-600 active:scale-95 border-2 border-emerald-700 text-white shadow-sm`;
+        btn.setAttribute("aria-pressed", "true");
+        btn.setAttribute("aria-label", `${item.code} seleccionada, ${priceText}`);
+        btn.innerHTML = `
+          ${item.isSpecial ? '<span class="absolute top-1 right-1 text-[9px] leading-none text-amber-200" aria-hidden="true">★</span>' : ""}
+          <span class="text-sm sm:text-base font-black tracking-tight">${item.shortLabel}</span>
+          <span class="text-[10px] sm:text-[11px] font-bold text-emerald-50 mt-0.5 whitespace-nowrap">${priceText}</span>
+        `;
+      } else if (item.isSpecial) {
+        // Estado: DISPONIBLE ESPECIAL (borde dorado + estrella + precio especial)
+        btn.className = `${baseSize} relative bg-amber-50 hover:bg-amber-100 active:scale-95 border-2 border-amber-400 text-amber-950 shadow-2xs`;
+        btn.setAttribute("aria-pressed", "false");
+        btn.setAttribute("aria-label", `${item.code} especial disponible, ${priceText}`);
+        btn.innerHTML = `
+          <span class="absolute top-1 right-1 text-[9px] leading-none text-amber-500" aria-hidden="true">★</span>
+          <span class="text-sm sm:text-base font-black tracking-tight">${item.shortLabel}</span>
+          <span class="text-[10px] sm:text-[11px] font-extrabold text-amber-700 mt-0.5 whitespace-nowrap">${priceText}</span>
+        `;
+      } else {
+        // Estado: DISPONIBLE NORMAL
+        btn.className = `${baseSize} relative bg-white hover:border-navy-800 hover:bg-lime-50 active:scale-95 border border-slate-300 text-navy-900 shadow-2xs`;
+        btn.setAttribute("aria-pressed", "false");
+        btn.setAttribute("aria-label", `${item.code} disponible, ${priceText}`);
+        btn.innerHTML = `
+          <span class="text-sm sm:text-base font-extrabold tracking-tight">${item.shortLabel}</span>
+          <span class="text-[10px] sm:text-[11px] font-semibold text-slate-600 mt-0.5 whitespace-nowrap">${priceText}</span>
+        `;
+      }
+
+      if (item.available) {
+        btn.addEventListener("click", () => toggleSticker(item.code));
+      }
+
+      return btn;
+    }
+
+    /**
+     * Renderiza la lista continua de 49 bloques (FWC + 48 países).
+     * Cada bloque muestra SIEMPRE 2 filas exactas de 10 botones (1–10 arriba, 11–20 abajo)
+     * con el precio visible dentro de cada botón.
+     */
+    function renderTableRows() {
+      dom.rowsContainer.innerHTML = "";
+      const searchMatcher = buildSearchMatcher(state.searchRaw);
+      const fragment = document.createDocumentFragment();
+
+      let visibleRowsCount = 0;
+      const anchoredGroups = new Set();
+
+      state.rows.forEach((row) => {
+        const itemVisibility = row.items.map((item) => {
+          const isSel = state.selected.has(item.code);
+          if (state.filter === "available" && !item.available) return false;
+          if (state.filter === "special" && !item.isSpecial) return false;
+          if (state.filter === "selected" && !isSel) return false;
+          if (searchMatcher && !searchMatcher(item)) return false;
+          return true;
+        });
+
+        const anyVisible = itemVisibility.some(Boolean);
+        if (!anyVisible) return;
+        visibleRowsCount++;
+
+        const gStyle = GROUP_STYLES[row.groupId];
+        const selInRow = row.items.filter((it) => state.selected.has(it.code)).length;
+        const rangeLabel = row.groupId === "FWC" ? "00–F9 / F10–F19" : "1–10 / 11–20";
+
+        // Separación visual más marcada al terminar cada grupo
+        const bottomDivider = row.isLastInGroup ? "border-b-4 border-b-slate-300" : "";
+
+        const rowEl = document.createElement("div");
+        rowEl.className = `scroll-mt-32 border-l-4 ${gStyle.borderLeft} ${gStyle.rowTint} ${bottomDivider} flex flex-col min-[680px]:flex-row min-[680px]:items-stretch`;
+
+        if (!anchoredGroups.has(row.groupId)) {
+          anchoredGroups.add(row.groupId);
+          rowEl.id = `group-anchor-${row.groupId}`;
+        }
+
+        // Bloque identificador de Grupo + País
+        // En <680px: franja superior compacta. En >=680px: columna fija izquierda.
+        const metaEl = document.createElement("div");
+        metaEl.className = `px-3 py-2 min-[680px]:py-3 min-[680px]:w-[152px] shrink-0 flex items-center justify-between min-[680px]:flex-col min-[680px]:items-start min-[680px]:justify-center gap-2 border-b min-[680px]:border-b-0 min-[680px]:border-r border-slate-200/80 ${gStyle.stickyTint}`;
+
+        metaEl.innerHTML = `
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-8 h-8 rounded-xl flex items-center justify-center font-black text-sm shrink-0 shadow-2xs ${gStyle.badgeBg}" title="${
+              row.groupId === "FWC" ? "Especiales FWC" : "Grupo " + row.groupId
+            }">
+              ${row.groupDisplay}
+            </span>
+            <div class="min-w-0">
+              <div class="text-sm sm:text-base font-black text-navy-900 leading-none tracking-tight">${row.countryCode}</div>
+              <div class="text-[11px] text-slate-600 font-medium truncate mt-0.5">${row.countryName}</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 min-[680px]:w-full min-[680px]:justify-between shrink-0">
+            <span class="min-[680px]:hidden text-[10px] font-bold text-slate-500 bg-white/80 border border-slate-200 px-2 py-0.5 rounded-md">
+              ${rangeLabel}
+            </span>
+            ${
+              selInRow > 0
+                ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-extrabold shadow-2xs">${selInRow} selec.</span>`
+                : `<span class="hidden min-[680px]:inline-block text-[10px] font-semibold text-slate-400">${rangeLabel}</span>`
+            }
+          </div>
+        `;
+
+        // Contenedor de las 2 filas exactas de 10 botones (scroll horizontal suave solo si <540px)
+        const gridsScrollWrap = document.createElement("div");
+        gridsScrollWrap.className = "flex-1 overflow-x-auto p-2 sm:p-2.5";
+
+        const twoRowsWrap = document.createElement("div");
+        twoRowsWrap.className = "space-y-1.5 min-w-[540px] min-[680px]:min-w-0";
+
+        // Fila 1: 1 al 10 (en FWC: 00, F1..F9)
+        const firstRowGrid = document.createElement("div");
+        firstRowGrid.className = "grid grid-cols-[repeat(10,minmax(52px,1fr))] gap-1.5";
+        for (let i = 0; i < 10; i++) {
+          firstRowGrid.appendChild(createStickerCell(row.items[i], itemVisibility[i]));
+        }
+
+        // Fila 2: 11 al 20 (en FWC: F10..F19)
+        const secondRowGrid = document.createElement("div");
+        secondRowGrid.className = "grid grid-cols-[repeat(10,minmax(52px,1fr))] gap-1.5";
+        for (let i = 10; i < 20; i++) {
+          secondRowGrid.appendChild(createStickerCell(row.items[i], itemVisibility[i]));
+        }
+
+        twoRowsWrap.appendChild(firstRowGrid);
+        twoRowsWrap.appendChild(secondRowGrid);
+        gridsScrollWrap.appendChild(twoRowsWrap);
+
+        rowEl.appendChild(metaEl);
+        rowEl.appendChild(gridsScrollWrap);
+        fragment.appendChild(rowEl);
+      });
+
+      dom.rowsContainer.appendChild(fragment);
+      dom.emptyState.classList.toggle("hidden", visibleRowsCount > 0);
+    }
+
+    function renderStickyBar() {
+      const summary = getOrderSummary();
+      dom.stickyCount.textContent = summary.totalCount;
+      dom.stickySubtotal.textContent = formatMoney(summary.subtotal);
+
+      if (summary.discountPercent > 0) {
+        dom.stickyDiscountPill.textContent = `Descuento ${summary.discountPercent}% (-${formatMoney(summary.discountAmount)})`;
+        dom.stickyDiscountPill.classList.remove("hidden");
+        dom.stickySubtotal.classList.add("line-through");
+      } else {
+        dom.stickyDiscountPill.classList.add("hidden");
+        dom.stickySubtotal.classList.remove("line-through");
+      }
+
+      dom.stickyTotal.textContent = formatMoney(summary.totalPrice);
+      dom.clearSelectionBtn.disabled = summary.totalCount === 0;
+    }
+
+    function renderDetailModal() {
+      const summary = getOrderSummary();
+      dom.modalCountLabel.textContent = `${summary.totalCount} ${
+        summary.totalCount === 1 ? "figurita seleccionada" : "figuritas seleccionadas"
+      }`;
+      dom.modalSubtotal.textContent = formatMoney(summary.subtotal);
+
+      if (summary.discountPercent > 0) {
+        dom.modalDiscountLabel.textContent = `Descuento (${summary.discountPercent}%)`;
+        dom.modalDiscount.textContent = `-${formatMoney(summary.discountAmount)}`;
+        dom.modalDiscountRow.classList.remove("hidden");
+      } else {
+        dom.modalDiscountRow.classList.add("hidden");
+      }
+      dom.modalTotal.textContent = formatMoney(summary.totalPrice);
+
+      if (summary.totalCount === 0) {
+        dom.modalBody.innerHTML = `
+          <div class="text-center py-10 text-slate-500 text-sm">
+            Todavía no has marcado ninguna figurita.<br/>
+            Toca los números en la lista o pega tus faltantes arriba.
+          </div>
+        `;
+        return;
+      }
+
+      dom.modalBody.innerHTML = summary.grouped
+        .map((g) => {
+          const gStyle = GROUP_STYLES[g.groupId];
+          return `
+          <div class="bg-white rounded-xl border border-slate-200 p-3 space-y-2 shadow-2xs">
+            <div class="flex items-center justify-between text-xs font-extrabold text-navy-900">
+              <span class="flex items-center gap-1.5">
+                <span class="w-5 h-5 rounded flex items-center justify-center text-[10px] font-black ${gStyle.badgeBg}">${g.groupDisplay}</span>
+                <span>${g.countryCode} — ${g.countryName} (${g.items.length})</span>
+              </span>
+              <span class="text-emerald-700">${formatMoney(g.subtotal)}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              ${g.items
+                .map(
+                  (it) => `
+                <button
+                  type="button"
+                  data-remove-code="${it.code}"
+                  title="Quitar ${it.code}"
+                  class="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-bold transition-colors ${
+                    it.isSpecial
+                      ? "bg-amber-100 hover:bg-rose-100 hover:text-rose-700 text-amber-950 border border-amber-300"
+                      : "bg-slate-100 hover:bg-rose-100 hover:text-rose-700 text-navy-900"
+                  }"
+                >
+                  <span>${it.isSpecial ? "★" : ""}${it.code}</span>
+                  <span class="text-[10px] font-semibold opacity-75">(${formatMoney(it.price)})</span>
+                  <span class="text-[10px] opacity-60">×</span>
+                </button>`
+                )
+                .join("")}
+            </div>
+          </div>`;
+        })
+        .join("");
+
+      dom.modalBody.querySelectorAll("[data-remove-code]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          state.selected.delete(btn.dataset.removeCode);
+          saveSelection();
+          renderAll();
+          renderDetailModal();
+        });
+      });
+    }
+
+    function renderAll() {
+      renderHeaderStats();
+      renderFilterPills();
+      renderTableRows();
+      renderStickyBar();
+    }
+
+    function toggleSticker(code) {
+      const item = state.stickerMap.get(code);
+      if (!item || !item.available) return;
+
+      if (state.selected.has(code)) {
+        state.selected.delete(code);
+      } else {
+        state.selected.add(code);
+      }
+
+      saveSelection();
+      renderFilterPills();
+      renderTableRows();
+      renderStickyBar();
+    }
+
+    function handleMarkList() {
+      const raw = dom.searchPasteInput.value.trim();
+      if (!raw) {
+        showToast("Escribe o pega tu lista (ej: 00, FWC1, MEX01, MEX 5, ARG10)");
+        dom.searchPasteInput.focus();
+        return;
+      }
+
+      const tokenMatches = raw.match(/(?:FWC[\s\-_]?\d{1,2}|[A-Za-z]{3}[\s\-_]?\d{1,2}|\b00\b|[A-Za-z0-9\-_]+)/gi);
+      if (!tokenMatches || tokenMatches.length === 0) {
+        showToast("No encontramos códigos válidos en el texto");
+        return;
+      }
+
+      const newlyMarked = [];
+      const alreadySelected = [];
+      const outOfStock = [];
+      const notFound = [];
+      const seenCodes = new Set();
+
+      tokenMatches.forEach((tok) => {
+        const cleanTok = tok.trim();
+        if (!cleanTok) return;
+        const code = normalizeAlbumCode(cleanTok);
+
+        if (!code) {
+          if (/[0-9]/.test(cleanTok) || cleanTok.length >= 3) {
+            notFound.push(cleanTok.toUpperCase());
+          }
+          return;
+        }
+
+        if (seenCodes.has(code)) return;
+        seenCodes.add(code);
+
+        const item = state.stickerMap.get(code);
+        if (!item) {
+          notFound.push(cleanTok.toUpperCase());
+        } else if (!item.available) {
+          outOfStock.push(code);
+        } else if (state.selected.has(code)) {
+          alreadySelected.push(code);
+        } else {
+          state.selected.add(code);
+          newlyMarked.push(code);
+        }
+      });
+
+      saveSelection();
+      state.searchRaw = "";
+      dom.searchPasteInput.value = "";
+      dom.clearInputBtn.classList.add("hidden");
+      renderAll();
+
+      const lines = [];
+      if (newlyMarked.length > 0) {
+        lines.push(`<p class="text-emerald-700"><strong class="font-bold">✓ Marcadas (${newlyMarked.length}):</strong> ${newlyMarked.join(", ")}</p>`);
+      }
+      if (alreadySelected.length > 0) {
+        lines.push(`<p class="text-sky-700"><strong class="font-bold">• Ya seleccionadas (${alreadySelected.length}):</strong> ${alreadySelected.join(", ")}</p>`);
+      }
+      if (outOfStock.length > 0) {
+        lines.push(`<p class="text-rose-600"><strong class="font-bold">✕ Agotadas (${outOfStock.length}):</strong> ${outOfStock.join(", ")}</p>`);
+      }
+      if (notFound.length > 0) {
+        lines.push(`<p class="text-slate-500"><strong class="font-bold">? No encontradas (${notFound.length}):</strong> ${notFound.join(", ")}</p>`);
+      }
+      if (lines.length === 0) {
+        lines.push('<p class="text-slate-600">No se reconocieron códigos del Mundial 2026.</p>');
+      }
+
+      dom.pasteFeedbackBody.innerHTML = lines.join("");
+      dom.pasteFeedback.classList.remove("hidden");
+
+      if (newlyMarked.length > 0) {
+        showToast(`¡Listo! Se marcaron ${newlyMarked.length} figurita(s)`);
+      } else if (outOfStock.length > 0 && alreadySelected.length === 0) {
+        showToast("Las figuritas de tu lista están agotadas");
+      } else {
+        showToast("Revisa el detalle del marcado");
+      }
+    }
+
+    function sendWhatsAppOrder() {
+      const summary = getOrderSummary();
+      if (summary.totalCount === 0) {
+        showToast("Selecciona al menos una figurita primero");
+        return;
+      }
+      const message = buildWhatsAppMessage();
+      const phone = String(CONFIG.whatsapp).replace(/\D/g, "");
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function copyOrderText() {
+      const summary = getOrderSummary();
+      if (summary.totalCount === 0) {
+        showToast("No hay figuritas seleccionadas");
+        return;
+      }
+      const message = buildWhatsAppMessage();
+      try {
+        const temp = document.createElement("textarea");
+        temp.value = message;
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.focus();
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        showToast("¡Pedido copiado al portapapeles!");
+      } catch (err) {
+        showToast("No se pudo copiar automáticamente");
+      }
+    }
+
+    /* =========================================================================
+       9. EVENTOS E INICIALIZACIÓN
+       ========================================================================= */
+    function bindEvents() {
+      dom.searchPasteInput.addEventListener("input", (e) => {
+        state.searchRaw = e.target.value;
+        dom.clearInputBtn.classList.toggle("hidden", !state.searchRaw);
+        renderTableRows();
+      });
+
+      dom.searchPasteInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          handleMarkList();
+        }
+      });
+
+      dom.clearInputBtn.addEventListener("click", () => {
+        state.searchRaw = "";
+        dom.searchPasteInput.value = "";
+        dom.clearInputBtn.classList.add("hidden");
+        renderTableRows();
+        dom.searchPasteInput.focus();
+      });
+
+      dom.markListBtn.addEventListener("click", handleMarkList);
+      dom.closeFeedbackBtn.addEventListener("click", () => dom.pasteFeedback.classList.add("hidden"));
+
+      // Recargar stock en vivo
+      dom.reloadStockBtn.addEventListener("click", () => loadStock(true));
+      dom.retryLoadBtn.addEventListener("click", () => loadStock(true));
+
+      // Restablecer filtros
+      dom.resetFiltersBtn.addEventListener("click", () => {
+        state.filter = "all";
+        state.searchRaw = "";
+        dom.searchPasteInput.value = "";
+        dom.clearInputBtn.classList.add("hidden");
+        renderAll();
+      });
+
+      // Modal de detalle
+      dom.openDetailBtn.addEventListener("click", () => {
+        renderDetailModal();
+        dom.detailModal.classList.remove("hidden");
+      });
+      dom.closeDetailBtn.addEventListener("click", () => dom.detailModal.classList.add("hidden"));
+      dom.detailModal.addEventListener("click", (e) => {
+        if (e.target === dom.detailModal) dom.detailModal.classList.add("hidden");
+      });
+
+      // WhatsApp y copiar
+      dom.whatsappBtn.addEventListener("click", sendWhatsAppOrder);
+      dom.modalWhatsappBtn.addEventListener("click", sendWhatsAppOrder);
+      dom.copyOrderBtn.addEventListener("click", copyOrderText);
+
+      // Confirmación de limpiar selección
+      dom.clearSelectionBtn.addEventListener("click", () => dom.confirmClearModal.classList.remove("hidden"));
+      dom.cancelClearBtn.addEventListener("click", () => dom.confirmClearModal.classList.add("hidden"));
+      dom.confirmClearModal.addEventListener("click", (e) => {
+        if (e.target === dom.confirmClearModal) dom.confirmClearModal.classList.add("hidden");
+      });
+      dom.confirmClearBtn.addEventListener("click", () => {
+        state.selected.clear();
+        saveSelection();
+        dom.confirmClearModal.classList.add("hidden");
+        renderAll();
+        showToast("Selección limpiada");
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      dom.albumTitle.textContent = CONFIG.nombreAlbum;
+      document.title = `${CONFIG.nombreAlbum} — Catálogo Interactivo de Figuritas`;
+      renderJumpBar();
+      initOfferBanner();
+      bindEvents();
+      loadStock(false);
+    });
+  </script>
+</body>
+</html>
